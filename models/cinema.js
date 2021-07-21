@@ -26,3 +26,9 @@ Cinema.prototype.findFilmsByYear = function(year) {
   let filmsByYear = this.films.some(film => film.year === year);
   return filmsByYear;
 }
+
+Cinema.prototype.allFilmsLength = function (length) {
+  let filmsByLength = this.films.every(film => film.length >= length);
+  return filmsByLength;
+}
+
