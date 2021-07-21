@@ -32,3 +32,10 @@ Cinema.prototype.allFilmsLength = function (length) {
   return filmsByLength;
 }
 
+Cinema.prototype.totalRunningTime = function () {
+  let allLengths = this.films.map(film => film.length)
+  const reducer = function(accumulator, currentValue) {accumulator += currentValue
+    return accumulator}
+  let totalLengths = allLengths.reduce(reducer)
+  return totalLengths
+}
