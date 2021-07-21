@@ -12,10 +12,17 @@ Cinema.prototype.listAllFilms = function() {
 }
 
 Cinema.prototype.findFilmByTitle = function(title) {
-  let filmsByName = this.films.filter(film => film.title == title);
-  filmsByName = filmsByName[0]
+  let filmsByName = this.films.filter(film => film.title === title);
+  filmsByName = filmsByName[0];
   return filmsByName;
 }
 
+Cinema.prototype.findFilmsByGenre = function(genre) {
+  let filmsByGenre = this.films.filter(film => film.genre === genre);
+  return filmsByGenre;
+}
 
-
+Cinema.prototype.findFilmsByYear = function(year) {
+  let filmsByYear = this.films.some(film => film.year === year);
+  return filmsByYear;
+}
