@@ -11,3 +11,11 @@ Cinema.prototype.listAllFilms = function() {
   return allFilms
 }
 
+Cinema.prototype.findFilmByTitle = function(title) {
+  let filmsByName = this.films.filter(film => film.title == title);
+  filmsByName = filmsByName[0]
+  return filmsByName;
+}
+
+
+
